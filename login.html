@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Zaptick</title>
+  <meta name="description" content="Sign in to your Zaptick workspace to manage your WhatsApp Cloud API integrations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#004D40',
+              light: '#0D2E27',
+              dark: '#00332A'
+            },
+            emerald: {
+              DEFAULT: '#10B981',
+              light: '#34D399',
+              dark: '#059669'
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
+
+  <div class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+    
+    <!-- Left Column: Value Proposition & WA Features Grid -->
+    <div class="bg-white p-8 md:p-16 flex flex-col justify-between border-r border-slate-100">
+      
+      <!-- Top Brand Logo -->
+      <div>
+        <a href="index.html" class="inline-flex items-center text-teal-950 font-black tracking-tight text-xl mb-12">
+          <span class="text-emerald-500 mr-1.5 font-extrabold">✓</span> Zaptick
+        </a>
+        
+        <div class="max-w-xl">
+          <div class="inline-flex items-center gap-1.5 bg-emerald-50 border border-emerald-100 text-emerald-600 text-[10px] tracking-widest font-mono font-bold px-3 py-1 rounded-full mb-6 uppercase">
+            OFFICIAL WHATSAPP BSP
+          </div>
+          
+          <h1 class="text-3xl md:text-4xl font-extrabold text-teal-950 tracking-tight leading-tight mb-4">
+            The customer engagement OS for <span class="text-emerald-500">modern brands</span>
+          </h1>
+          
+          <p class="text-slate-500 text-sm md:text-base leading-relaxed mb-10">
+            Official Meta API integrations, multi-agent inboxes, automated broadcast funnels, and AI chatbots — built for teams that ship at enterprise scale.
+          </p>
+          
+          <!-- Feature Grid -->
+          <div class="space-y-4">
+            <span class="text-[11px] font-bold text-slate-400 tracking-wider uppercase block">BUILT INTO YOUR WORKSPACE</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              
+              <!-- Card 1 -->
+              <div class="p-4 border border-slate-200/80 rounded-lg bg-white shadow-xs">
+                <span class="font-bold text-teal-950 text-xs block mb-1">WhatsApp Business API</span>
+                <span class="text-[11px] text-slate-400">Official Meta integration</span>
+              </div>
+              
+              <!-- Card 2 -->
+              <div class="p-4 border border-slate-200/80 rounded-lg bg-white shadow-xs">
+                <span class="font-bold text-teal-950 text-xs block mb-1">Multi-Agent Team Inbox</span>
+                <span class="text-[11px] text-slate-400">Collaborative ticket routing</span>
+              </div>
+              
+              <!-- Card 3 -->
+              <div class="p-4 border border-slate-200/80 rounded-lg bg-white shadow-xs">
+                <span class="font-bold text-teal-950 text-xs block mb-1">AI Chatbots</span>
+                <span class="text-[11px] text-slate-400">LLM-native automated flows</span>
+              </div>
+              
+              <!-- Card 4 -->
+              <div class="p-4 border border-slate-200/80 rounded-lg bg-white shadow-xs">
+                <span class="font-bold text-teal-950 text-xs block mb-1">Broadcast Manager</span>
+                <span class="text-[11px] text-slate-400">High-volume marketing campaigns</span>
+              </div>
+              
+              <!-- Card 5 -->
+              <div class="p-4 border border-slate-200/80 rounded-lg bg-white shadow-xs">
+                <span class="font-bold text-teal-950 text-xs block mb-1">WhatsApp Catalogs</span>
+                <span class="text-[11px] text-slate-400">Native in-chat commerce</span>
+              </div>
+              
+              <!-- Card 6 -->
+              <div class="p-4 border border-slate-200/80 rounded-lg bg-white shadow-xs">
+                <span class="font-bold text-teal-950 text-xs block mb-1">Click-to-WhatsApp Ads</span>
+                <span class="text-[11px] text-slate-400">Social lead capture</span>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Trust Badges -->
+      <div class="border-t border-slate-100 pt-8 mt-12">
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-slate-400 text-xs font-medium">
+          <div class="flex items-center gap-1">
+            <span>🛡️</span> <span>SOC 2 Type II</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span>🔒</span> <span>ISO 27001</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span>✓</span> <span>GDPR ready</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span>⚡</span> <span>99.99% uptime</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Right Column: Authentication Form -->
+    <div class="bg-slate-50 flex items-center justify-center p-8 md:p-16">
+      
+      <div class="max-w-md w-full bg-white shadow-sm border border-slate-200/80 rounded-xl p-8 space-y-6">
+        
+        <!-- Form Header -->
+        <div class="space-y-1">
+          <h2 class="text-2xl font-bold text-teal-950 tracking-tight">Welcome back</h2>
+          <p class="text-xs text-slate-500">Sign in to your Zaptick workspace.</p>
+        </div>
+        
+        <!-- Form Inputs -->
+        <form class="space-y-4" onsubmit="event.preventDefault(); window.location.href='index.html';">
+          
+          <div class="space-y-1.5">
+            <label for="email" class="text-xs font-semibold text-slate-700 block">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              placeholder="you@company.com" 
+              required
+              class="w-full bg-white border border-slate-200 rounded-lg px-3 py-2 text-xs placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition shadow-xs"
+            >
+          </div>
+          
+          <div class="space-y-1.5">
+            <div class="flex justify-between items-center">
+              <label for="password" class="text-xs font-semibold text-slate-700 block">Password</label>
+              <a href="#" class="text-[10px] text-emerald-600 hover:text-emerald-700 font-semibold transition">Forgot password?</a>
+            </div>
+            <input 
+              type="password" 
+              id="password" 
+              placeholder="Enter your password" 
+              required
+              class="w-full bg-white border border-slate-200 rounded-lg px-3 py-2 text-xs placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition shadow-xs"
+            >
+          </div>
+          
+          <!-- Primary CTA Button -->
+          <button 
+            type="submit" 
+            class="w-full bg-teal-950 hover:bg-teal-900 text-white font-bold py-2.5 rounded-lg text-xs tracking-wide transition shadow-sm mt-2 flex items-center justify-center gap-1.5"
+          >
+            Sign in →
+          </button>
+          
+        </form>
+        
+        <!-- Form Footer -->
+        <div class="space-y-4 pt-4 border-t border-slate-100 text-center">
+          
+          <!-- Secured indicator -->
+          <div class="flex items-center justify-center gap-1.5 text-[10px] text-slate-400">
+            <span>🔒</span>
+            <span>Secured with 256-bit encryption</span>
+          </div>
+          
+          <!-- Bottom Links -->
+          <div class="space-y-1 text-xs">
+            <a href="#" class="text-slate-500 hover:text-slate-800 transition block">
+              Don't have an account? <span class="text-emerald-600 font-bold">Create an account</span>
+            </a>
+            <div class="text-[10px] text-slate-400 pt-2">
+              Need assistance? Email <a href="mailto:support@zaptick.io" class="text-slate-500 hover:underline">support@zaptick.io</a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+
+</body>
+</html>

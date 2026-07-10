@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Automation Playbook - Zaptick</title>
+  <meta name="description" content="Scale real estate operations on WhatsApp. Automate property catalogs, score buyers 24/7, and schedule visits seamlessly.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#004D40',
+              light: '#0D2E27',
+              dark: '#00332A'
+            },
+            emerald: {
+              DEFAULT: '#10B981',
+              light: '#34D399',
+              dark: '#059669'
+            }
+          },
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans light-mode antialiased">
+
+    <!-- Sticky Header Navigation Bar -->
+  <header class="flex items-center justify-between w-full px-8 py-4 bg-white border-b border-slate-200 relative mb-6 z-50">
+    <!-- Brand Logo -->
+    <a href="index.html" class="flex items-center text-teal-950 font-black tracking-tight text-xl">
+      <span class="text-emerald-500 mr-1.5 font-extrabold">✓</span> Zaptick
+    </a>
+    
+    <!-- Right Side Unified Flex Navigation Block -->
+    <div class="flex items-center gap-8 ml-auto">
+      <!-- Platform Dropdown -->
+      <div class="relative group">
+        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Platform ⌄</span>
+        <div class="w-[500px] absolute top-full right-0 bg-white shadow-xl rounded-2xl border border-slate-200 p-4 z-50 grid grid-cols-2 gap-2 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top-right">
+          
+          <!-- Left Column (CHANNELS & CORE ENGINE) -->
+          <div class="flex flex-col gap-1 text-left">
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Channels & Core Engine</div>
+            
+            <a href="/whatsapp-api.html" class="flex items-center justify-between p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              <span>WhatsApp Business API</span>
+              <span class="font-mono text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">META</span>
+            </a>
+            
+            <a href="/click-to-whatsapp.html" class="flex items-center justify-between p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              <span>Click to WhatsApp Ads</span>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold font-mono px-1.5 py-0.5 rounded ml-2">Ads</span>
+            </a>
+            
+            <a href="/meta-infrastructure.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              Meta Cloud Infrastructure
+            </a>
+          </div>
+          
+          <!-- Right Column (FEATURES & AUTOMATION / TOOLKIT) -->
+          <div class="flex flex-col gap-1 text-left">
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Features & Automation</div>
+            
+            <a href="/chatbot-builder.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              AI Chatbot Builder
+            </a>
+            
+            <a href="/broadcast-manager.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              Broadcast Manager
+            </a>
+            
+            <div class="border-t border-slate-100 mt-2 pt-2 px-1">
+              <div class="flex flex-col gap-0.5">
+                <a href="/qr-generator.html" class="text-xs text-slate-600 hover:text-teal-950 font-medium flex items-center gap-1.5 p-2 hover:bg-slate-50 rounded">✓ QR Code Generator</a>
+                <a href="/link-generator.html" class="text-xs text-slate-600 hover:text-teal-950 font-medium flex items-center gap-1.5 p-2 hover:bg-slate-50 rounded">✓ WhatsApp Link Generator</a>
+                <a href="/widget-builder.html" class="text-xs text-slate-600 hover:text-teal-950 font-medium flex items-center gap-1.5 p-2 hover:bg-slate-50 rounded">✓ Chat Widget Builder</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Solutions Dropdown -->
+      <div class="relative group">
+        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Solutions ⌄</span>
+        <div class="w-[240px] absolute top-full right-0 bg-white shadow-xl rounded-2xl border border-slate-200 p-3 z-50 flex flex-col gap-1 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top-right">
+          <a href="/solutions-real-estate.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Real Estate</a>
+          <a href="/solutions-education.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Education</a>
+          <a href="/solutions-finance.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Financial Services</a>
+          <a href="/solutions-ecommerce.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">E-commerce</a>
+          <a href="/solutions-healthcare.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Healthcare</a>
+          <a href="/solutions-hospitality.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Hospitality</a>
+        </div>
+      </div>
+
+      <!-- Resources Dropdown -->
+      <div class="relative group">
+        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Resources ⌄</span>
+        <div class="w-[320px] flex flex-col gap-1 top-full right-0 bg-white shadow-xl rounded-xl border border-slate-200 p-5 z-50 transition-all duration-200 transform origin-top-right invisible opacity-0 scale-95 pointer-events-none absolute group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto">
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 px-2">LEARN & GROW - Resources</div>
+          <div class="flex flex-col gap-1">
+            <a href="/platform-docs.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Platform Docs</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Comprehensive guides for WhatsApp automation, webhook mapping & custom workflows.</div>
+            </a>
+            <a href="/why-zaptick.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Why Zaptick?</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">See how 100+ businesses across 6+ countries scale their customer engagement platform.</div>
+            </a>
+            <a href="/blog.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Blog</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Deep industry case studies, conversion optimization formulas & Meta API updates.</div>
+            </a>
+            <a href="/partner-program.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Partner Program</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Earn monthly commissions within the Zaptick ecosystem.</div>
+            </a>
+          </div>
+          <div class="border-t border-slate-100 mt-2 pt-2 px-2">
+            <a href="/blog.html" class="text-xs text-emerald-600 hover:text-emerald-700 font-bold block">Latest from the blog →</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="pricing.html" class="text-sm font-semibold text-slate-600 hover:text-teal-950">Pricing</a>
+
+      <!-- WhatsApp Action Badge -->
+      <button class="w-8 h-8 rounded-full bg-emerald-50 hover:bg-emerald-100 flex items-center justify-center text-emerald-600 transition" aria-label="WhatsApp Chat">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.618-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+      </button>
+
+      <!-- Sign in & Get started Actions -->
+      <a href="login.html" class="text-sm font-medium text-slate-700 hover:text-teal-950 transition">Sign in</a>
+      <a href="pricing.html" class="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition shadow-sm">Get started</a>
+    </div>
+  </header>
+
+  <!-- Playbook Hero -->
+  <section class="pt-32 pb-12 text-center relative overflow-hidden bg-gradient-to-b from-emerald-500/10 via-slate-50 to-slate-50">
+    <div class="container mx-auto px-6 max-w-4xl relative z-10">
+      <div class="inline-block bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 text-[11px] tracking-widest font-mono font-bold px-3 py-1 rounded-full mb-6 uppercase">
+        ✓ REAL ESTATE AUTOMATION ENGINE
+      </div>
+      <h1 class="text-4xl font-black text-teal-950 tracking-tight leading-tight">
+        Generate More Property Leads & Automate Site Visits
+      </h1>
+      <p class="text-slate-500 mt-2 text-sm max-w-xl leading-relaxed mx-auto">
+        Capture customer inbound requirements, schedule structural tours, and track client inquiries 24/7 all inside WhatsApp. Close real estate deals faster with an AI Sales Assistant.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
+        <a href="pricing.html" class="bg-teal-950 hover:bg-teal-900 text-white font-semibold py-3 px-6 rounded-lg shadow-sm transition-all duration-200">
+          Deploy Playbook
+        </a>
+        <a href="pricing.html" class="bg-white hover:bg-slate-100 text-teal-950 border border-slate-200 font-semibold py-3 px-6 rounded-lg shadow-xs transition-all duration-200">
+          Talk to Support
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Realistic CSS/HTML Real Estate Analytics & Conversation Workspace Mockup Panel -->
+  <main class="pb-24 bg-slate-50">
+    <div class="bg-slate-50 rounded-3xl border border-slate-200 p-6 shadow-xl w-full max-w-4xl mx-auto grid grid-cols-1 gap-6 mt-12 animate-fade-in">
+      
+      <!-- Top Row - Core Performance Stat Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Card 1 (New Leads) -->
+        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col justify-between">
+          <span class="text-[9px] font-bold text-slate-400 tracking-wider uppercase font-mono">NEW LEADS</span>
+          <div class="flex items-baseline justify-between mt-2">
+            <span class="text-2xl font-extrabold text-teal-950">1,241</span>
+            <span class="text-xs font-bold text-emerald-600">+18%</span>
+          </div>
+        </div>
+        <!-- Card 2 (Site Visits) -->
+        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col justify-between">
+          <span class="text-[9px] font-bold text-slate-400 tracking-wider uppercase font-mono">SITE VISITS</span>
+          <div class="flex items-baseline justify-between mt-2">
+            <span class="text-2xl font-extrabold text-emerald-600">892</span>
+            <span class="text-xs font-bold text-emerald-600">+12%</span>
+          </div>
+        </div>
+        <!-- Card 3 (AI Qualified) -->
+        <div class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm flex flex-col justify-between">
+          <span class="text-[9px] font-bold text-slate-400 tracking-wider uppercase font-mono">AI QUALIFIED</span>
+          <div class="flex items-baseline justify-between mt-2">
+            <span class="text-2xl font-extrabold text-blue-600">96%</span>
+            <span class="text-xs font-bold text-emerald-600">+4%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Row - Active AI Sales Assistant Chat Thread -->
+      <div class="bg-white border border-slate-100 rounded-xl shadow-sm p-4 flex flex-col gap-4 text-left">
+        <div class="flex items-center justify-between border-b border-slate-100 pb-3 text-xs font-semibold text-slate-700">
+          <span>AI Sales Assistant</span>
+          <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 font-mono text-[9px] font-bold px-2 py-0.5 rounded-full">
+            <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping"></span>
+            142 active
+          </span>
+        </div>
+        <!-- Messages -->
+        <div class="flex flex-col gap-3 font-sans">
+          <!-- Inbound Query Bubble (Left Aligned) -->
+          <div class="bg-slate-100 text-slate-800 text-xs p-3 rounded-xl max-w-[80%] self-start border border-slate-200/50">
+            Are there any 3BHK options available in Downtown?
+          </div>
+          <!-- Outbound AI Automation Response (Right Aligned) -->
+          <div class="bg-teal-950 text-white text-xs p-4 rounded-xl max-w-[85%] self-end shadow-md font-medium leading-relaxed">
+            Yes! Skyline Heights has premium 3BHKs starting at $450k. I've sent the floor plans above. Shall I book a site visit?
+          </div>
+          <!-- Quick-Action Response Options Block -->
+          <div class="flex justify-end gap-2 text-[11px] font-bold mt-1">
+            <button class="border border-slate-200 rounded-full px-3 py-1 bg-white text-slate-700 hover:bg-slate-50 transition">Yes, please</button>
+            <button class="border border-slate-200 rounded-full px-3 py-1 bg-white text-slate-700 hover:bg-slate-50 transition">View location</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row - Real-Time Live Activity Feed -->
+      <div class="bg-white border border-slate-100 rounded-xl shadow-sm p-4 text-left">
+        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">LIVE ACTIVITY (Real-time)</p>
+        <div class="bg-slate-50/70 p-3 rounded-lg border border-slate-100 flex justify-between items-center text-xs">
+          <div class="flex items-center gap-2 text-slate-700">
+            <span class="text-emerald-500">●</span>
+            <span>New lead via Facebook • Looking for 3BHK</span>
+          </div>
+          <span class="text-slate-400 font-mono text-[10px]">now</span>
+        </div>
+      </div>
+
+      <!-- Pipeline Health Funnel Progress Matrices -->
+      <div class="bg-white border border-slate-100 rounded-xl shadow-sm p-5 flex flex-col gap-4 text-left">
+        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-1">PIPELINE HEALTH</p>
+        <div class="space-y-3">
+          <!-- Item 1 -->
+          <div>
+            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Inquiries</span><span>100%</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-slate-800 h-full rounded-full" style="width: 100%;"></div></div>
+          </div>
+          <!-- Item 2 -->
+          <div>
+            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Qualified</span><span>72%</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-forest h-full rounded-full" style="width: 72%;"></div></div>
+          </div>
+          <!-- Item 3 -->
+          <div>
+            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Site Visited</span><span>48%</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-emerald-500 h-full rounded-full" style="width: 48%;"></div></div>
+          </div>
+          <!-- Item 4 -->
+          <div>
+            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Negotiating</span><span>20%</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-blue-400 h-full rounded-full" style="width: 20%;"></div></div>
+          </div>
+          <!-- Item 5 -->
+          <div>
+            <div class="flex justify-between text-[11px] font-semibold text-slate-600 mb-1"><span>Closed Deals</span><span>8%</span></div>
+            <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-yellow-500 h-full rounded-full" style="width: 8%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Horizontal Core Metrics Highlight Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mt-20 mb-16 px-4">
+      <!-- Stat Box 1 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-teal-950">95%+</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Message Open Rate</span>
+      </div>
+      <!-- Stat Box 2 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-emerald-600">3X</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Faster Responses</span>
+      </div>
+      <!-- Stat Box 3 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-sky-600">1M+</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Buyer Reach</span>
+      </div>
+      <!-- Stat Box 4 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-amber-500">60%+</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Engagement Boost</span>
+      </div>
+    </div>
+
+    <!-- Horizontal Core Metrics Highlight Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto mt-20 mb-16 px-4">
+      <!-- Stat Box 1 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-teal-950">95%+</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Message Open Rate</span>
+      </div>
+      <!-- Stat Box 2 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-emerald-600">3X</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Faster Responses</span>
+      </div>
+      <!-- Stat Box 3 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-sky-600">1M+</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Buyer Reach</span>
+      </div>
+      <!-- Stat Box 4 -->
+      <div class="bg-white border border-slate-200 p-5 rounded-xl shadow-sm flex flex-col gap-1 text-left">
+        <span class="text-2xl font-black text-amber-500">60%+</span>
+        <span class="text-[10px] font-mono font-bold text-slate-400 tracking-wider uppercase">Engagement Boost</span>
+      </div>
+    </div>
+
+    <!-- NEW WORKFLOW SPLIT MODULE 1: GENERATE HIGH-INTENT LEADS -->
+    <div class="max-w-6xl mx-auto px-6 my-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Column Area (Content Tree) -->
+      <div class="text-left">
+        <div class="flex items-center gap-2 mb-3 text-xs text-slate-400 font-mono font-bold">
+          <span>03 - ACQUIRE</span>
+          <span class="bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full text-[10px]">SMS</span>
+        </div>
+        <h2 class="text-3xl font-black text-teal-950 tracking-tight mb-4">
+          Generate <span class="text-emerald-600">High-Intent Leads</span>
+        </h2>
+        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+          Convert ad clicks into instant WhatsApp conversations with Click-to-WhatsApp campaigns. Capture buyer intent in real time and qualify automatically.
+        </p>
+        <div class="space-y-3 font-medium text-slate-800 text-xs">
+          <div class="flex items-center gap-2"><span>✓</span> <span>Click-to-WhatsApp Ads</span></div>
+          <div class="flex items-center gap-2"><span>✓</span> <span>Automated qualification</span></div>
+          <div class="flex items-center gap-2"><span>✓</span> <span>Instant CRM sync</span></div>
+        </div>
+        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm max-w-[160px] flex flex-col mt-6">
+          <span class="text-xl font-black text-indigo-600">1M+</span>
+          <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider">BUYER REACH</span>
+        </div>
+      </div>
+      <!-- Right Column Area (Visual Interface Layout Card) -->
+      <div class="bg-slate-100 rounded-3xl p-6 border border-slate-200/60 shadow-lg relative flex flex-col items-center justify-center min-h-[340px]">
+        <div class="relative w-full max-w-[280px] bg-slate-800 rounded-lg p-2 pb-6 shadow-md border-b-4 border-slate-700">
+          <div class="bg-white rounded p-3 text-left space-y-2">
+            <div class="flex items-center gap-2 border-b border-slate-100 pb-2">
+              <div class="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center text-[10px] font-bold text-slate-500">ZR</div>
+              <div>
+                <span class="text-[9px] font-bold text-slate-800 block leading-tight">Zaptick Realty</span>
+                <span class="text-[7px] text-slate-400 block leading-none">Sponsored • Facebook</span>
+              </div>
+            </div>
+            <div class="h-20 bg-emerald-50 rounded flex items-center justify-center text-[9px] font-bold text-emerald-800 border border-emerald-100">
+              [ Skyline Premium 3BHK ]
+            </div>
+            <div class="flex justify-between items-center bg-slate-50 p-1.5 rounded border border-slate-100">
+              <span class="text-[8px] text-slate-500">Downtown luxury starting at $450k</span>
+              <span class="bg-emerald-500 text-white font-bold text-[7px] px-2 py-0.5 rounded">Send Message</span>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md border border-slate-200/50 rounded-xl p-3 shadow-sm flex items-center justify-between text-left">
+          <div>
+            <span class="text-[8px] font-mono font-bold text-indigo-600 block uppercase">03 - ACQUIRE</span>
+            <span class="text-[10px] font-extrabold text-teal-950 block">Generate High-Intent Leads</span>
+          </div>
+          <span class="text-[9px] font-mono font-bold text-slate-400">1M+ REACH</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW WORKFLOW SPLIT MODULE 2: AUTOMATE PAYMENT REMINDERS -->
+    <div class="max-w-6xl mx-auto px-6 my-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Left Column Area (Mobile Phone Core Preview Component) -->
+      <div class="lg:order-first order-last">
+        <div class="bg-slate-900 text-white rounded-[40px] p-3 shadow-2xl border-4 border-slate-800 w-full max-w-[320px] mx-auto relative overflow-hidden h-[540px] flex flex-col">
+          <div class="absolute top-2 left-1/2 -translate-x-1/2 w-24 h-4 bg-black rounded-full z-20 flex items-center justify-center">
+            <span class="w-2 h-2 bg-slate-800 rounded-full"></span>
+          </div>
+          <div class="flex justify-between px-6 pt-3 text-[10px] font-bold text-slate-400 z-10">
+            <span>9:41</span>
+            <div class="flex gap-1.5">
+              <span>📶</span>
+              <span>🔋</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 border-b border-slate-800 pb-3 pt-6 px-4">
+            <div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center font-bold text-white text-xs">ZR</div>
+            <div class="text-left">
+              <span class="text-[11px] font-bold block">Zaptick Realty ✓</span>
+              <span class="text-[8px] text-slate-400 block">Verified Business Account</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-3 p-4 flex-1">
+            <div class="bg-white text-slate-800 text-xs p-3 rounded-2xl rounded-tl-none max-w-[85%] self-start shadow-xs border border-slate-100/50 mt-4 text-left font-sans">
+              <p class="leading-relaxed">Hi Rahul, This is a friendly reminder that your monthly rent of ₹25,000 for the Villeet apartment is due tomorrow. Please pay at your earliest convenience. Thank you!</p>
+              <div class="mt-3 bg-emerald-500 hover:bg-emerald-600 text-white text-center text-xs font-bold p-2.5 rounded-xl flex items-center justify-center gap-2 cursor-pointer transition">
+                <span>📂</span> Pay Rent Now
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md border border-slate-200/50 rounded-xl p-3 shadow-sm flex items-center justify-between text-left text-slate-800">
+            <div>
+              <span class="text-[8px] font-mono font-bold text-sky-600 block uppercase">04 - MANAGE</span>
+              <span class="text-[10px] font-extrabold text-teal-950 block">Automating Payment Reminders</span>
+            </div>
+            <span class="text-[9px] font-mono font-bold text-slate-400">60%+ BOOST</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column Area (Content Tree) -->
+      <div class="text-left">
+        <div class="flex items-center gap-2 mb-3 text-xs text-slate-400 font-mono font-bold">
+          <span>04 - MANAGE</span>
+          <span class="bg-sky-50 text-sky-700 px-2 py-0.5 rounded-full text-[10px]">Email</span>
+        </div>
+        <h2 class="text-3xl font-black text-teal-950 tracking-tight mb-4">
+          Automate <span class="text-emerald-600">Payment Reminders</span>
+        </h2>
+        <p class="text-slate-500 text-sm leading-relaxed mb-6">
+          Send timely rent and installment reminders directly on WhatsApp without manual follow-ups. Reduce payment delays and improve cash flow.
+        </p>
+        <div class="space-y-3 font-medium text-slate-800 text-xs">
+          <div class="flex items-center gap-2"><span>✓</span> <span>Automated installment nudges</span></div>
+          <div class="flex items-center gap-2"><span>✓</span> <span>Rent collection flows</span></div>
+          <div class="flex items-center gap-2"><span>✓</span> <span>Payment links integrated</span></div>
+        </div>
+        <div class="bg-white border border-slate-200 p-4 rounded-xl shadow-sm max-w-[160px] flex flex-col mt-6">
+          <span class="text-xl font-black text-sky-600">60%+</span>
+          <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider">ENGAGEMENT BOOST</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NEW TWO-COLUMN ANALYTICS MODULE 3: WATCH THE SALES ASSISTANT AT WORK -->
+    <div class="max-w-6xl mx-auto px-6 my-24 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <!-- Left Layout - Interactive Assistant Chat Frame -->
+      <div class="text-left">
+        <h3 class="text-2xl font-black text-teal-950 mb-2">Watch the sales assistant at work.</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">The AI handles initial intent checking, document delivery, and schedules the site visit seamlessly.</p>
+        
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm flex flex-col gap-3 text-xs mt-6">
+          <div class="bg-slate-100 text-slate-800 p-3 rounded-2xl rounded-tr-none max-w-[80%] self-end">
+            Hi, I saw your ad for the 3BHK in Downtown.
+          </div>
+          <div class="bg-teal-950 text-white p-3.5 rounded-2xl rounded-tl-none max-w-[80%] self-start leading-relaxed shadow-sm">
+            Hello! Thanks for your interest in Skyline Heights. Are you looking to buy for investment or end-use?
+          </div>
+          <div class="bg-slate-100 text-slate-800 p-3 rounded-2xl rounded-tr-none max-w-[80%] self-end">
+            End-use. Moving in next year.
+          </div>
+          <div class="bg-teal-950 text-white p-3.5 rounded-2xl rounded-tl-none max-w-[80%] self-start leading-relaxed shadow-sm">
+            Great! Skyline Heights has a Dec 2025 possession. I've attached the floor plan and pricing. Shall I schedule a site visit for this weekend?
+          </div>
+          <div class="flex gap-2 justify-start mt-2">
+            <button class="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold px-3 py-1.5 rounded-full text-[10px] shadow-sm">View floor plans</button>
+            <button class="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold px-3 py-1.5 rounded-full text-[10px] shadow-sm">Download Brochure</button>
+            <button class="border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-bold px-3 py-1.5 rounded-full text-[10px] shadow-sm">Talk to Sales</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Layout - Site Visit Performance Graph Frame -->
+      <div class="text-left">
+        <h3 class="text-2xl font-black text-teal-950 mb-2">Site visit performance, at a glance.</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Inquiries and site visits by month — see exactly how Zaptick streamlines your sales funnel.</p>
+        
+        <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm flex flex-col gap-4 mt-6">
+          <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+            <div>
+              <span class="text-lg font-black text-teal-950 block">1,640</span>
+              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Peak Inquiries</span>
+            </div>
+            <div>
+              <span class="text-lg font-black text-emerald-600 block">920</span>
+              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Peak Site Visits</span>
+            </div>
+            <div>
+              <span class="text-lg font-black text-sky-600 block">56%</span>
+              <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Conversion Rate</span>
+            </div>
+          </div>
+
+          <div class="relative h-48 bg-slate-50 rounded-xl border border-slate-100 p-4 flex flex-col justify-between font-mono text-[9px] text-slate-400">
+            <div class="flex items-end justify-between h-36 border-b border-slate-200 pb-1 relative">
+              <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-slate-800 text-white font-sans text-[9px] font-bold py-1 px-2.5 rounded shadow-md z-10">
+                inquiries: 810 • siteVisits: 380
+              </div>
+              <div class="flex flex-col items-center gap-1 w-8">
+                <div class="w-2.5 bg-slate-300 h-12 rounded-t"></div>
+                <div class="w-2.5 bg-emerald-300 h-6 rounded-t"></div>
+              </div>
+              <div class="flex flex-col items-center gap-1 w-8">
+                <div class="w-2.5 bg-slate-300 h-16 rounded-t"></div>
+                <div class="w-2.5 bg-emerald-300 h-8 rounded-t"></div>
+              </div>
+              <div class="flex flex-col items-center gap-1 w-8 relative ring-2 ring-emerald-500 rounded p-0.5">
+                <div class="w-2.5 bg-slate-400 h-24 rounded-t"></div>
+                <div class="w-2.5 bg-emerald-400 h-12 rounded-t"></div>
+              </div>
+              <div class="flex flex-col items-center gap-1 w-8">
+                <div class="w-2.5 bg-slate-300 h-20 rounded-t"></div>
+                <div class="w-2.5 bg-emerald-300 h-10 rounded-t"></div>
+              </div>
+              <div class="flex flex-col items-center gap-1 w-8">
+                <div class="w-2.5 bg-slate-300 h-28 rounded-t"></div>
+                <div class="w-2.5 bg-emerald-300 h-16 rounded-t"></div>
+              </div>
+              <div class="flex flex-col items-center gap-1 w-8">
+                <div class="w-2.5 bg-slate-300 h-32 rounded-t"></div>
+                <div class="w-2.5 bg-emerald-300 h-20 rounded-t"></div>
+              </div>
+            </div>
+            <div class="flex justify-between px-1">
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+              <span>Nov</span>
+              <span>Dec</span>
+              <span>Jan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    <!-- Pre-Footer Banner Card Block -->
+  <div class="bg-emerald-50/50 rounded-2xl border border-emerald-100 max-w-7xl mx-auto my-16 p-12 text-center shadow-sm">
+    <h2 class="text-3xl font-bold text-teal-950">Ready to get started?</h2>
+    <p class="text-slate-600 mt-2 mb-6">Join 12,500+ businesses growing with Zaptick.</p>
+    <div class="flex justify-center items-center gap-4">
+      <a href="pricing.html" class="inline-flex items-center justify-center bg-teal-950 text-white font-medium px-6 py-3 rounded-full hover:bg-teal-900 transition-all shadow-sm">Start free →</a>
+      <a href="pricing.html" class="inline-flex items-center justify-center border border-slate-300 text-slate-700 bg-white font-medium px-6 py-3 rounded-full hover:bg-slate-50 transition-all shadow-sm">Talk to sales</a>
+    </div>
+  </div>
+
+  <!-- Main Footer Layout -->
+  <footer class="bg-white border-t border-slate-200 pt-16 pb-8 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 text-left relative">
+    
+    <!-- Column 1 (Brand Info & Socials) -->
+    <div class="flex flex-col gap-4">
+      <a href="index.html" class="inline-flex items-center text-teal-950 font-black tracking-tight text-xl">
+        <span class="text-emerald-500 mr-1.5 font-extrabold">✓</span> Zaptick
+      </a>
+      <p class="text-xs text-slate-500 leading-relaxed">
+        The agentic OS for WhatsApp Business communication. Unified into one AI-native platform with campaigns, workflows, and developer APIs.
+      </p>
+      
+      <div class="text-[11px] text-slate-400">
+        Support: <a href="mailto:hello@zaptick.io" class="text-slate-600 hover:underline">hello@zaptick.io</a>
+      </div>
+      <div class="flex gap-3 text-slate-400">
+        <a href="#" class="hover:text-teal-950 transition text-xs">𝕏</a>
+        <a href="#" class="hover:text-teal-950 transition text-xs">GitHub</a>
+        <a href="#" class="hover:text-teal-950 transition text-xs">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- Column 2 (Product Links) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Product</h4>
+      <a href="/whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Business API</a>
+      <a href="/whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Shared Team Inbox</a>
+      <a href="/chatbot-builder.html" class="text-sm text-slate-600 hover:text-teal-950">AI Chatbot Builder</a>
+      <a href="/broadcast-manager.html" class="text-sm text-slate-600 hover:text-teal-950">Broadcast Manager</a>
+      <a href="/click-to-whatsapp.html" class="text-sm text-slate-600 hover:text-teal-950">Click-to-WhatsApp Ads</a>
+      <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">API Documentation</a>
+    </div>
+
+    <!-- Column 3 (Free Tools) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Free Tools</h4>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">QR Code Generator</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Link Generator</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Chat Widget Builder</a>
+    </div>
+
+    <!-- Column 4 (Industries) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Industries</h4>
+      <a href="solutions-real-estate.html" class="text-sm text-slate-600 hover:text-teal-950">Real Estate</a>
+      <a href="solutions-education.html" class="text-sm text-slate-600 hover:text-teal-950">Education</a>
+      <a href="solutions-finance.html" class="text-sm text-slate-600 hover:text-teal-950">Financial Services</a>
+      <a href="solutions-ecommerce.html" class="text-sm text-slate-600 hover:text-teal-950">E-commerce</a>
+      <a href="solutions-healthcare.html" class="text-sm text-slate-600 hover:text-teal-950">Healthcare</a>
+      <a href="solutions-hospitality.html" class="text-sm text-slate-600 hover:text-teal-950">Hospitality</a>
+    </div>
+
+    <!-- Column 5 (Company & Resources) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Company</h4>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">About Us</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Contact Us</a>
+      <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">Platform Documentation</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Why Zaptick?</a>
+    </div>
+
+    <!-- MANDATORY HORIZONTAL BOTTOM TRUST BADGES ROW -->
+    <div class="w-full border-t border-slate-100 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 col-span-1 md:col-span-5">
+      <!-- Left Item (Meta Badge) -->
+      <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 flex items-center gap-3 max-w-xs">
+        <svg width="24" height="24" fill="#0064e0" viewBox="0 0 24 24" class="shrink-0">
+          <path d="M19.14 7.5a4.86 4.86 0 0 0-4.06 2.06c-1-1.42-2.39-2.06-4.06-2.06A4.93 4.93 0 0 0 6 12.36a4.93 4.93 0 0 0 5.08 4.86c1.67 0 3.06-.64 4.06-2.06a4.86 4.86 0 0 0 4.06 2.06A4.93 4.93 0 0 0 24 12.36 4.93 4.93 0 0 0 19.14 7.5zm-8.06 8.36c-1.89 0-3.08-1.52-3.08-3.5 0-1.92 1.19-3.5 3.08-3.5 1.77 0 2.87 1.34 2.87 3.5 0 2.22-1.1 3.5-2.87 3.5zm8.06 0c-1.77 0-2.87-1.34-2.87-3.5 0-2.22 1.1-3.5 2.87-3.5 1.89 0 3.08 1.52 3.08 3.5 0 1.98-1.19 3.5-3.08 3.5z"/>
+        </svg>
+        <div class="text-left">
+          <p class="text-xs font-bold text-slate-900 leading-tight">Meta Business Partner</p>
+          <p class="text-[9px] text-slate-400 font-semibold uppercase tracking-wider mt-0.5">Tech Partner</p>
+        </div>
+      </div>
+
+      <!-- Right Item (WhatsApp Badge) -->
+      <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 flex items-center gap-3 max-w-xs">
+        <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center border border-slate-100 shrink-0">
+          <svg width="16" height="16" fill="#25D366" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.618-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+        </div>
+        <div class="text-left">
+          <p class="text-xs font-bold text-slate-900">Official WhatsApp Business API</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="max-w-7xl mx-auto border-t border-slate-100 pt-8 pb-12 flex flex-col md:flex-row justify-between items-center gap-4 px-8">
+    <p class="text-[11px] text-slate-400">
+      &copy; 2026 Zaptick Inc. All rights reserved. WhatsApp and Meta are trademarks of Meta Platforms, Inc.
+    </p>
+    <div class="flex gap-4 text-[11px] text-slate-400 font-medium">
+      <a href="#" class="hover:underline">Privacy Policy</a>
+      <a href="#" class="hover:underline">Terms of Service</a>
+      <a href="#" class="hover:underline">HIPAA & GDPR Compliance</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  </body>
+  </html>

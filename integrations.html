@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrations | Zaptick WhatsApp BSP middle-layer</title>
+  <meta name="description" content="Connect Shopify, HubSpot, Stripe, Razorpay and CRM tools directly to the WhatsApp Cloud API ecosystem via Zaptick. Automate templates, payments, and tickets.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+      <!-- Navigation Bar -->
+  
+
+
+  <!-- Hero Section -->
+                                                                      <!-- Sticky Header Navigation Bar -->
+  <header class="flex items-center justify-between w-full px-8 py-4 bg-white border-b border-slate-200 relative mb-6 z-50">
+    <!-- Brand Logo -->
+    <a href="index.html" class="flex items-center text-teal-950 font-black tracking-tight text-xl">
+      <span class="text-emerald-500 mr-1.5 font-extrabold">✓</span> Zaptick
+    </a>
+    
+    <!-- Right Side Unified Flex Navigation Block -->
+    <div class="flex items-center gap-8 ml-auto">
+      <!-- Platform Dropdown -->
+      <div class="relative group">
+        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Platform ⌄</span>
+        <div class="w-[500px] absolute top-full right-0 bg-white shadow-xl rounded-2xl border border-slate-200 p-4 z-50 grid grid-cols-2 gap-2 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top-right">
+          
+          <!-- Left Column (CHANNELS & CORE ENGINE) -->
+          <div class="flex flex-col gap-1 text-left">
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Channels & Core Engine</div>
+            
+            <a href="/whatsapp-api.html" class="flex items-center justify-between p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              <span>WhatsApp Business API</span>
+              <span class="font-mono text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">META</span>
+            </a>
+            
+            <a href="/click-to-whatsapp.html" class="flex items-center justify-between p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              <span>Click to WhatsApp Ads</span>
+              <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold font-mono px-1.5 py-0.5 rounded ml-2">Ads</span>
+            </a>
+            
+            <a href="/meta-infrastructure.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              Meta Cloud Infrastructure
+            </a>
+          </div>
+          
+          <!-- Right Column (FEATURES & AUTOMATION / TOOLKIT) -->
+          <div class="flex flex-col gap-1 text-left">
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono px-3 py-1.5">Features & Automation</div>
+            
+            <a href="/chatbot-builder.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              AI Chatbot Builder
+            </a>
+            
+            <a href="/broadcast-manager.html" class="flex items-center p-3 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">
+              Broadcast Manager
+            </a>
+            
+            <div class="border-t border-slate-100 mt-2 pt-2 px-1">
+              <div class="flex flex-col gap-0.5">
+                <a href="/qr-generator.html" class="text-xs text-slate-600 hover:text-teal-950 font-medium flex items-center gap-1.5 p-2 hover:bg-slate-50 rounded">✓ QR Code Generator</a>
+                <a href="/link-generator.html" class="text-xs text-slate-600 hover:text-teal-950 font-medium flex items-center gap-1.5 p-2 hover:bg-slate-50 rounded">✓ WhatsApp Link Generator</a>
+                <a href="/widget-builder.html" class="text-xs text-slate-600 hover:text-teal-950 font-medium flex items-center gap-1.5 p-2 hover:bg-slate-50 rounded">✓ Chat Widget Builder</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Solutions Dropdown -->
+      <div class="relative group">
+        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Solutions ⌄</span>
+        <div class="w-[240px] absolute top-full right-0 bg-white shadow-xl rounded-2xl border border-slate-200 p-3 z-50 flex flex-col gap-1 transition-all duration-200 invisible opacity-0 scale-95 pointer-events-none group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transform origin-top-right">
+          <a href="/solutions-real-estate.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Real Estate</a>
+          <a href="/solutions-education.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Education</a>
+          <a href="/solutions-finance.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Financial Services</a>
+          <a href="/solutions-ecommerce.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">E-commerce</a>
+          <a href="/solutions-healthcare.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Healthcare</a>
+          <a href="/solutions-hospitality.html" class="block p-2 rounded-xl text-sm font-bold text-teal-950 hover:bg-slate-50 transition-colors">Hospitality</a>
+        </div>
+      </div>
+
+      <!-- Resources Dropdown -->
+      <div class="relative group">
+        <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Resources ⌄</span>
+        <div class="w-[320px] flex flex-col gap-1 top-full right-0 bg-white shadow-xl rounded-xl border border-slate-200 p-5 z-50 transition-all duration-200 transform origin-top-right invisible opacity-0 scale-95 pointer-events-none absolute group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto">
+          <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2 px-2">LEARN & GROW - Resources</div>
+          <div class="flex flex-col gap-1">
+            <a href="/platform-docs.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Platform Docs</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Comprehensive guides for WhatsApp automation, webhook mapping & custom workflows.</div>
+            </a>
+            <a href="/why-zaptick.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Why Zaptick?</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">See how 100+ businesses across 6+ countries scale their customer engagement platform.</div>
+            </a>
+            <a href="/blog.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Blog</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Deep industry case studies, conversion optimization formulas & Meta API updates.</div>
+            </a>
+            <a href="/partner-program.html" class="block hover:bg-slate-50 p-2 rounded-lg transition">
+              <div class="font-bold text-slate-900 text-xs">Partner Program</div>
+              <div class="text-[11px] text-slate-500 mt-0.5 leading-normal">Earn monthly commissions within the Zaptick ecosystem.</div>
+            </a>
+          </div>
+          <div class="border-t border-slate-100 mt-2 pt-2 px-2">
+            <a href="/blog.html" class="text-xs text-emerald-600 hover:text-emerald-700 font-bold block">Latest from the blog →</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="pricing.html" class="text-sm font-semibold text-slate-600 hover:text-teal-950">Pricing</a>
+
+      <!-- WhatsApp Action Badge -->
+      <button class="w-8 h-8 rounded-full bg-emerald-50 hover:bg-emerald-100 flex items-center justify-center text-emerald-600 transition" aria-label="WhatsApp Chat">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.618-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+      </button>
+
+      <!-- Sign in & Get started Actions -->
+      <a href="login.html" class="text-sm font-medium text-slate-700 hover:text-teal-950 transition">Sign in</a>
+      <a href="pricing.html" class="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition shadow-sm">Get started</a>
+    </div>
+  </header>
+
+  <!-- Interactive Data Integrations Pipeline -->
+  <section class="integrations-wrapper container" id="integrations-showcase">
+    <div class="node-board">
+      
+      <!-- Visual Connected Graph -->
+      <svg class="node-svg-overlay">
+        <!-- Connecting lines between left and center -->
+        <line x1="15%" y1="25%" x2="50%" y2="50%" stroke="#D1D8D6" stroke-width="2" stroke-dasharray="6,4" />
+        <line x1="15%" y1="50%" x2="50%" y2="50%" stroke="#D1D8D6" stroke-width="2" stroke-dasharray="6,4" />
+        <line x1="15%" y1="75%" x2="50%" y2="50%" stroke="#D1D8D6" stroke-width="2" stroke-dasharray="6,4" />
+        
+        <!-- Connecting lines between right and center -->
+        <line x1="85%" y1="25%" x2="50%" y2="50%" stroke="#D1D8D6" stroke-width="2" stroke-dasharray="6,4" />
+        <line x1="85%" y1="50%" x2="50%" y2="50%" stroke="#D1D8D6" stroke-width="2" stroke-dasharray="6,4" />
+        <line x1="85%" y1="75%" x2="50%" y2="50%" stroke="#D1D8D6" stroke-width="2" stroke-dasharray="6,4" />
+      </svg>
+
+      <div class="node-container">
+        
+        <!-- Left Column: E-commerce & Payments -->
+        <div class="node-col" id="node-col-left">
+          <div class="node-item" id="node-shopify">Shopify Store</div>
+          <div class="node-item" id="node-woocommerce">WooCommerce</div>
+          <div class="node-item" id="node-stripe">Stripe Gateway</div>
+        </div>
+
+        <!-- Center Element: Zaptick Pipeline -->
+        <div class="node-center" id="node-center-zaptalk">
+          Zaptick
+          <span>BSP Engine</span>
+        </div>
+
+        <!-- Right Column: Channels & CRMs -->
+        <div class="node-col" id="node-col-right">
+          <div class="node-item" id="node-hubspot">HubSpot CRM</div>
+          <div class="node-item" id="node-salesforce">Salesforce Cloud</div>
+          <div class="node-item" id="node-whatsapp">Official WhatsApp API</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Integrations Details Grid -->
+    <div class="int-details-grid" id="details-grid">
+      
+      <!-- Card 1: E-Commerce -->
+      <div class="int-card" id="int-shopify-woo">
+        <div class="int-meta">
+          <div class="int-logo-wrapper" style="color: #96bf48;">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 16h-2v-6h2v6zm0-8h-2V8h-2V6h4v4zm5 8h-2V6h2v12z"/></svg>
+          </div>
+          <span class="int-tag">E-Commerce</span>
+        </div>
+        <h3>Shopify & WooCommerce</h3>
+        <p>Harness direct conversion pipelines right into customer chat screens. Connect e-commerce backends to automate order updates and checkout recovery flows.</p>
+        <ul class="int-features-list">
+          <li>Automated abandoned cart recoveries</li>
+          <li>Dynamic custom coupon injections</li>
+          <li>Order status & tracking delivery pings</li>
+          <li>Catalogs synched automatically</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: CRMs -->
+      <div class="int-card" id="int-crm-salesforce">
+        <div class="int-meta">
+          <div class="int-logo-wrapper" style="color: #ff7a59;">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <span class="int-tag">CRMs & Support</span>
+        </div>
+        <h3>HubSpot, Salesforce & Zoho</h3>
+        <p>Maintain a single source of truth. Log customer conversations directly back into active lead profiles automatically to keep pipelines aligned.</p>
+        <ul class="int-features-list">
+          <li>Instant chat timeline synchronizations</li>
+          <li>Dynamic lead profile creation</li>
+          <li>Update ticket flags based on intent</li>
+          <li>Agent routing linked directly to owners</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Payments -->
+      <div class="int-card" id="int-stripe-razorpay">
+        <div class="int-meta">
+          <div class="int-logo-wrapper" style="color: #635bff;">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm-5 14H4v-4h11v4zm5-5H4V9h16v4z"/></svg>
+          </div>
+          <span class="int-tag">Finance & Payments</span>
+        </div>
+        <h3>Razorpay & Stripe</h3>
+        <p>Shorten the purchase lifecycle. Generate official, dynamic, secure payment link components that can be tracked inside individual active chat threads.</p>
+        <ul class="int-features-list">
+          <li>Interactive invoice payment nodes</li>
+          <li>Real-time automated status updates</li>
+          <li>Trigger orders on payment completion</li>
+          <li>Dynamic in-chat receipt receipts</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- High-Density Parameter Mapping Table -->
+    <div class="container" style="margin-top: 60px; padding: 0;">
+      <div class="section-title-wrapper" style="margin-bottom: 30px; text-align: left;">
+        <h2 class="section-title" style="font-size: 1.8rem;">Data Parameter Routing Engine</h2>
+        <p class="section-desc" style="font-size: 0.95rem; margin: 0;">Map real-time customer event triggers to variables across your external tech stack.</p>
+      </div>
+
+      <div class="integrations-table-wrapper">
+        <table class="integrations-table">
+          <thead>
+            <tr>
+              <th>Integration Partner</th>
+              <th>Inbound Trigger Event</th>
+              <th>Passed Parameter Key</th>
+              <th>Automated WhatsApp BSP Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Shopify</strong></td>
+              <td>Checkout Abandoned</td>
+              <td><span class="parameter-tag">checkout.abandoned.cart_url</span></td>
+              <td>Dispatch cart recovery template containing custom short-link discounts.</td>
+            </tr>
+            <tr>
+              <td><strong>WooCommerce</strong></td>
+              <td>New Order Placed</td>
+              <td><span class="parameter-tag">order.created.tracking_number</span></td>
+              <td>Pushes dynamic shipment status template with real-time tracking number updates.</td>
+            </tr>
+            <tr>
+              <td><strong>HubSpot</strong></td>
+              <td>New Conversation Logged</td>
+              <td><span class="parameter-tag">crm.contact.chat_history</span></td>
+              <td>Streams full thread transcripts and logs lifecycle flags to HubSpot contact profile.</td>
+            </tr>
+            <tr>
+              <td><strong>Salesforce</strong></td>
+              <td>Ticket Status Change</td>
+              <td><span class="parameter-tag">salesforce.case.updated_status</span></td>
+              <td>Pushes service notification with custom interactive quick-reply status buttons.</td>
+            </tr>
+            <tr>
+              <td><strong>Stripe</strong></td>
+              <td>Invoice Created</td>
+              <td><span class="parameter-tag">stripe.invoice.payment_link</span></td>
+              <td>Generates contextual in-chat payment link card with real-time validation checks.</td>
+            </tr>
+            <tr>
+              <td><strong>Razorpay</strong></td>
+              <td>Order Payment Initiated</td>
+              <td><span class="parameter-tag">razorpay.order.amount_due</span></td>
+              <td>Pushes official invoice receipt with direct native WhatsApp chat checkout buttons.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Onboarding Funnel & Main Footer -->
+  <section class="footer-onboarding" id="onboarding-funnel">
+    <div class="container">
+      <div class="onboarding-title">
+        <h2>Go Live on WhatsApp in 30 Minutes</h2>
+        <p>Say goodbye to long enterprise approval queues. Get started instantly.</p>
+      </div>
+
+      <div class="timeline" id="onboarding-timeline">
+        <div class="timeline-step" id="step-1">
+          <div class="step-number">1</div>
+          <h4 class="step-title">Register</h4>
+          <p class="step-desc">Provision a Zaptick workspace dashboard in seconds.</p>
+        </div>
+        <div class="timeline-step active" id="step-2">
+          <div class="step-number">2</div>
+          <h4 class="step-title">Link Number</h4>
+          <p class="step-desc">Run through the Meta Embedded Signup workflow to connect your number in minutes.</p>
+        </div>
+        <div class="timeline-step" id="step-3">
+          <div class="step-number">3</div>
+          <h4 class="step-title">Apply for Green Tick</h4>
+          <p class="step-desc">Access guided platform support to claim your official verified Green Tick business badge.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <!-- Main Footer Layout -->
+    <!-- Footer main -->
+    <!-- Footer main -->
+    <!-- Footer main -->
+    <!-- Footer main -->
+    <!-- Footer main -->
+                                                                  <!-- Pre-Footer Banner Card Block -->
+  <div class="bg-emerald-50/50 rounded-2xl border border-emerald-100 max-w-7xl mx-auto my-16 p-12 text-center shadow-sm">
+    <h2 class="text-3xl font-bold text-teal-950">Ready to get started?</h2>
+    <p class="text-slate-600 mt-2 mb-6">Join 12,500+ businesses growing with Zaptick.</p>
+    <div class="flex justify-center items-center gap-4">
+      <a href="pricing.html" class="inline-flex items-center justify-center bg-teal-950 text-white font-medium px-6 py-3 rounded-full hover:bg-teal-900 transition-all shadow-sm">Start free →</a>
+      <a href="pricing.html" class="inline-flex items-center justify-center border border-slate-300 text-slate-700 bg-white font-medium px-6 py-3 rounded-full hover:bg-slate-50 transition-all shadow-sm">Talk to sales</a>
+    </div>
+  </div>
+
+  <!-- Main Footer Layout -->
+  <footer class="bg-white border-t border-slate-200 pt-16 pb-8 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 text-left relative">
+    
+    <!-- Column 1 (Brand Info & Socials) -->
+    <div class="flex flex-col gap-4">
+      <a href="index.html" class="inline-flex items-center text-teal-950 font-black tracking-tight text-xl">
+        <span class="text-emerald-500 mr-1.5 font-extrabold">✓</span> Zaptick
+      </a>
+      <p class="text-xs text-slate-500 leading-relaxed">
+        The agentic OS for WhatsApp Business communication. Unified into one AI-native platform with campaigns, workflows, and developer APIs.
+      </p>
+      
+      <div class="text-[11px] text-slate-400">
+        Support: <a href="mailto:hello@zaptick.io" class="text-slate-600 hover:underline">hello@zaptick.io</a>
+      </div>
+      <div class="flex gap-3 text-slate-400">
+        <a href="#" class="hover:text-teal-950 transition text-xs">𝕏</a>
+        <a href="#" class="hover:text-teal-950 transition text-xs">GitHub</a>
+        <a href="#" class="hover:text-teal-950 transition text-xs">LinkedIn</a>
+      </div>
+    </div>
+
+    <!-- Column 2 (Product Links) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Product</h4>
+      <a href="/whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Business API</a>
+      <a href="/whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Shared Team Inbox</a>
+      <a href="/chatbot-builder.html" class="text-sm text-slate-600 hover:text-teal-950">AI Chatbot Builder</a>
+      <a href="/broadcast-manager.html" class="text-sm text-slate-600 hover:text-teal-950">Broadcast Manager</a>
+      <a href="/click-to-whatsapp.html" class="text-sm text-slate-600 hover:text-teal-950">Click-to-WhatsApp Ads</a>
+      <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">API Documentation</a>
+    </div>
+
+    <!-- Column 3 (Free Tools) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Free Tools</h4>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">QR Code Generator</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Link Generator</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Chat Widget Builder</a>
+    </div>
+
+    <!-- Column 4 (Industries) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Industries</h4>
+      <a href="solutions-real-estate.html" class="text-sm text-slate-600 hover:text-teal-950">Real Estate</a>
+      <a href="solutions-education.html" class="text-sm text-slate-600 hover:text-teal-950">Education</a>
+      <a href="solutions-finance.html" class="text-sm text-slate-600 hover:text-teal-950">Financial Services</a>
+      <a href="solutions-ecommerce.html" class="text-sm text-slate-600 hover:text-teal-950">E-commerce</a>
+      <a href="solutions-healthcare.html" class="text-sm text-slate-600 hover:text-teal-950">Healthcare</a>
+      <a href="solutions-hospitality.html" class="text-sm text-slate-600 hover:text-teal-950">Hospitality</a>
+    </div>
+
+    <!-- Column 5 (Company & Resources) -->
+    <div class="flex flex-col gap-3 text-left">
+      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Company</h4>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">About Us</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Contact Us</a>
+      <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">Platform Documentation</a>
+      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Why Zaptick?</a>
+    </div>
+
+    <!-- MANDATORY HORIZONTAL BOTTOM TRUST BADGES ROW -->
+    <div class="w-full border-t border-slate-100 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 col-span-1 md:col-span-5">
+      <!-- Left Item (Meta Badge) -->
+      <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 flex items-center gap-3 max-w-xs">
+        <svg width="24" height="24" fill="#0064e0" viewBox="0 0 24 24" class="shrink-0">
+          <path d="M19.14 7.5a4.86 4.86 0 0 0-4.06 2.06c-1-1.42-2.39-2.06-4.06-2.06A4.93 4.93 0 0 0 6 12.36a4.93 4.93 0 0 0 5.08 4.86c1.67 0 3.06-.64 4.06-2.06a4.86 4.86 0 0 0 4.06 2.06A4.93 4.93 0 0 0 24 12.36 4.93 4.93 0 0 0 19.14 7.5zm-8.06 8.36c-1.89 0-3.08-1.52-3.08-3.5 0-1.92 1.19-3.5 3.08-3.5 1.77 0 2.87 1.34 2.87 3.5 0 2.22-1.1 3.5-2.87 3.5zm8.06 0c-1.77 0-2.87-1.34-2.87-3.5 0-2.22 1.1-3.5 2.87-3.5 1.89 0 3.08 1.52 3.08 3.5 0 1.98-1.19 3.5-3.08 3.5z"/>
+        </svg>
+        <div class="text-left">
+          <p class="text-xs font-bold text-slate-900 leading-tight">Meta Business Partner</p>
+          <p class="text-[9px] text-slate-400 font-semibold uppercase tracking-wider mt-0.5">Tech Partner</p>
+        </div>
+      </div>
+
+      <!-- Right Item (WhatsApp Badge) -->
+      <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 flex items-center gap-3 max-w-xs">
+        <div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center border border-slate-100 shrink-0">
+          <svg width="16" height="16" fill="#25D366" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.618-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+        </div>
+        <div class="text-left">
+          <p class="text-xs font-bold text-slate-900">Official WhatsApp Business API</p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="max-w-7xl mx-auto border-t border-slate-100 pt-8 pb-12 flex flex-col md:flex-row justify-between items-center gap-4 px-8">
+    <p class="text-[11px] text-slate-400">
+      &copy; 2026 Zaptick Inc. All rights reserved. WhatsApp and Meta are trademarks of Meta Platforms, Inc.
+    </p>
+    <div class="flex gap-4 text-[11px] text-slate-400 font-medium">
+      <a href="#" class="hover:underline">Privacy Policy</a>
+      <a href="#" class="hover:underline">Terms of Service</a>
+      <a href="#" class="hover:underline">HIPAA & GDPR Compliance</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  </body>
+  </html>
