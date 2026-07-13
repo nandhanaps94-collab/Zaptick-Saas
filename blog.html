@@ -36,7 +36,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
 
-                                                                                      <!-- Sticky Header Navigation Bar -->
+                                                                                        <!-- Sticky Header Navigation Bar -->
   <header class="flex items-center justify-between w-full px-8 py-4 bg-white border-b border-slate-200 relative mb-6 z-50">
     <!-- Brand Logo -->
     <a href="index.html" class="flex items-center text-teal-950 font-black tracking-tight text-xl">
@@ -216,7 +216,7 @@
     </div>
   </main>
 
-                                                                                  <!-- Pre-Footer Banner Card Block -->
+                                                                                    <!-- Pre-Footer Banner Card Block -->
   <div class="bg-emerald-50/50 rounded-2xl border border-emerald-100 max-w-7xl mx-auto my-16 p-12 text-center shadow-sm">
     <h2 class="text-3xl font-bold text-teal-950">Ready to get started?</h2>
     <p class="text-slate-600 mt-2 mb-6">Join 12,500+ businesses growing with ConnectStream.</p>
@@ -226,11 +226,11 @@
     </div>
   </div>
 
-  <!-- Main Footer Layout -->
-  <footer class="bg-white border-t border-slate-200 pt-16 pb-8 px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 text-left relative">
+    <!-- Main Footer Layout -->
+  <footer class="bg-white border-t border-slate-200 pt-16 pb-8 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 text-left relative">
     
-    <!-- Column 1 (Brand Info & Socials) -->
-    <div class="flex flex-col gap-4 md:col-span-2">
+    <!-- Left Column (Brand Info & Socials) -->
+    <div class="flex flex-col gap-4 w-full md:max-w-[25%] shrink-0">
       <a href="index.html" class="inline-flex items-center text-teal-950 font-black tracking-tight text-xl">
         <img src="images/logo.png" alt="ConnectStream Innovation Lab Logo" class="h-12 w-auto object-contain mr-3">
         ConnectStream Innovation Lab
@@ -249,47 +249,50 @@
       </div>
     </div>
 
-    <!-- Column 2 (Product Links) -->
-    <div class="flex flex-col gap-3 text-left">
-      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Product</h4>
-      <a href="whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Business API</a>
-      <a href="whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Shared Team Inbox</a>
-      <a href="chatbot-builder.html" class="text-sm text-slate-600 hover:text-teal-950">AI Chatbot Builder</a>
-      <a href="broadcast-manager.html" class="text-sm text-slate-600 hover:text-teal-950">Broadcast Manager</a>
-      <a href="click-to-whatsapp.html" class="text-sm text-slate-600 hover:text-teal-950">Click-to-WhatsApp Ads</a>
-      <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">API Documentation</a>
-    </div>
+    <!-- Right Navigation Columns Grid (spanning remaining width with distinct grid layout) -->
+    <div class="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8 md:pl-12">
+      <!-- Column 2 (Product Links) -->
+      <div class="flex flex-col gap-3 text-left">
+        <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Product</h4>
+        <a href="whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Business API</a>
+        <a href="whatsapp-api.html" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Shared Team Inbox</a>
+        <a href="chatbot-builder.html" class="text-sm text-slate-600 hover:text-teal-950">AI Chatbot Builder</a>
+        <a href="broadcast-manager.html" class="text-sm text-slate-600 hover:text-teal-950">Broadcast Manager</a>
+        <a href="click-to-whatsapp.html" class="text-sm text-slate-600 hover:text-teal-950">Click-to-WhatsApp Ads</a>
+        <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">API Documentation</a>
+      </div>
 
-    <!-- Column 3 (Free Tools) -->
-    <div class="flex flex-col gap-3 text-left">
-      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Free Tools</h4>
-      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">QR Code Generator</a>
-      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Link Generator</a>
-      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Chat Widget Builder</a>
-    </div>
+      <!-- Column 3 (Free Tools) -->
+      <div class="flex flex-col gap-3 text-left">
+        <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Free Tools</h4>
+        <a href="#" class="text-sm text-slate-600 hover:text-teal-950">QR Code Generator</a>
+        <a href="#" class="text-sm text-slate-600 hover:text-teal-950">WhatsApp Link Generator</a>
+        <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Chat Widget Builder</a>
+      </div>
 
-    <!-- Column 4 (Industries) -->
-    <div class="flex flex-col gap-3 text-left">
-      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Industries</h4>
-      <a href="solutions-real-estate.html" class="text-sm text-slate-600 hover:text-teal-950">Real Estate</a>
-      <a href="solutions-education.html" class="text-sm text-slate-600 hover:text-teal-950">Education</a>
-      <a href="solutions-finance.html" class="text-sm text-slate-600 hover:text-teal-950">Financial Services</a>
-      <a href="solutions-ecommerce.html" class="text-sm text-slate-600 hover:text-teal-950">E-commerce</a>
-      <a href="solutions-healthcare.html" class="text-sm text-slate-600 hover:text-teal-950">Healthcare</a>
-      <a href="solutions-hospitality.html" class="text-sm text-slate-600 hover:text-teal-950">Hospitality</a>
-    </div>
+      <!-- Column 4 (Industries) -->
+      <div class="flex flex-col gap-3 text-left">
+        <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Industries</h4>
+        <a href="solutions-real-estate.html" class="text-sm text-slate-600 hover:text-teal-950">Real Estate</a>
+        <a href="solutions-education.html" class="text-sm text-slate-600 hover:text-teal-950">Education</a>
+        <a href="solutions-finance.html" class="text-sm text-slate-600 hover:text-teal-950">Financial Services</a>
+        <a href="solutions-ecommerce.html" class="text-sm text-slate-600 hover:text-teal-950">E-commerce</a>
+        <a href="solutions-healthcare.html" class="text-sm text-slate-600 hover:text-teal-950">Healthcare</a>
+        <a href="solutions-hospitality.html" class="text-sm text-slate-600 hover:text-teal-950">Hospitality</a>
+      </div>
 
-    <!-- Column 5 (Company & Resources) -->
-    <div class="flex flex-col gap-3 text-left">
-      <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Company</h4>
-      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">About Us</a>
-      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Contact Us</a>
-      <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">Platform Documentation</a>
-      <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Why ConnectStream?</a>
+      <!-- Column 5 (Company & Resources) -->
+      <div class="flex flex-col gap-3 text-left">
+        <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Company</h4>
+        <a href="#" class="text-sm text-slate-600 hover:text-teal-950">About Us</a>
+        <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Contact Us</a>
+        <a href="developers.html" class="text-sm text-slate-600 hover:text-teal-950">Platform Documentation</a>
+        <a href="#" class="text-sm text-slate-600 hover:text-teal-950">Why ConnectStream?</a>
+      </div>
     </div>
 
     <!-- MANDATORY HORIZONTAL BOTTOM TRUST BADGES ROW -->
-    <div class="w-full border-t border-slate-100 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 col-span-1 md:col-span-6">
+    <div class="w-full border-t border-slate-100 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
       <!-- Left Item (Meta Badge) -->
       <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 flex items-center gap-3 max-w-xs">
         <svg width="24" height="24" fill="#0064e0" viewBox="0 0 24 24" class="shrink-0">
