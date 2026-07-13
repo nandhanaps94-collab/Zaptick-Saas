@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developers | ConnectStream WhatsApp Cloud API Playground</title>
-  <meta name="description" content="Integrate official WhatsApp Cloud API in minutes. Single-import TypeScript SDK, instant webhooks, and production-ready retry logic. Built for builders.">
+  <title>Terms of Service - ConnectStream Innovation Lab</title>
+  <meta name="description" content="Review the Terms of Service governing the use of ConnectStream platforms, APIs, and client workspace integrations.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans light-mode antialiased">
 
-  <!-- Navigation Bar -->
-      <!-- Navigation Bar -->
-  
-
-
-  <!-- Developer Page Hero Section -->
-                                                                                                      <!-- Sticky Header Navigation Bar -->
+  <!-- Sticky Header Navigation Bar -->
   <header class="flex items-center justify-between w-full px-8 py-4 bg-white border-b border-slate-200 relative mb-6 z-50">
     <!-- Brand Logo -->
     <a href="index.html" class="flex items-center text-teal-950 font-black tracking-tight text-xl">
@@ -129,119 +139,47 @@
     </div>
   </header>
 
-  <!-- Interactive SDK & Benefits Layout -->
-  <section class="dev-container container" id="developers-docs-main">
-    
-    <!-- Code Editor Panel (Dark styled as requested for syntax highlights contrast) -->
-    <div class="code-editor-wrapper" id="editor-wrapper">
-      <div class="editor-header">
-        <div class="editor-tabs">
-          <div class="editor-tab active" id="tab-ts" onclick="switchTab('typescript')">connectstream-sdk.ts</div>
-          <div class="editor-tab" id="tab-curl" onclick="switchTab('curl')">curl-dispatch.sh</div>
-        </div>
-        <div class="editor-window-controls">
-          <span class="control-dot"></span>
-          <span class="control-dot"></span>
-          <span class="control-dot"></span>
-        </div>
+  <main class="py-16 max-w-4xl mx-auto px-6">
+    <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm space-y-8">
+      <div class="border-b border-slate-100 pb-6">
+        <h1 class="text-3xl font-extrabold text-teal-950 tracking-tight">Terms of Service</h1>
+        <p class="text-sm text-slate-400 mt-2">Last updated: July 13, 2026</p>
       </div>
       
-      <div class="editor-content">
-        <!-- Content gets loaded dynamically by app.js -->
-        <div class="code-line">
-          <span class="line-number">1</span>
-          <span class="code-text" id="editor-code-pane"></span>
-        </div>
+      <div class="space-y-6 text-sm text-slate-600 leading-relaxed">
+        <p>
+          Welcome to the ConnectStream Innovation Lab platform (the "Service"). By registering a user workspace, configuring API integrations, or using our dashboard features, you agree to be bound by these Terms of Service. Please read them carefully.
+        </p>
+
+        <h2 class="text-xl font-bold text-teal-950 mt-8">1. User Account Registration & Workspaces</h2>
+        <p>
+          To access the platform, you must register a corporate workspace and provide authentic, accurate contact details. You are responsible for keeping passwords and API keys secure and confidential. Any activity logged within your workspace credentials is your sole responsibility.
+        </p>
+
+        <h2 class="text-xl font-bold text-teal-950 mt-8">2. WhatsApp Business API Usage Policy</h2>
+        <p>
+          ConnectStream functions as a developer tooling layer connected to official Meta Cloud API channels. All messages sent must comply with the official WhatsApp Business Messaging Policy. Sending unsolicited broadcast spam, deceptive content, or violating Meta compliance terms will lead to immediate workspace suspension without refund.
+        </p>
+
+        <h2 class="text-xl font-bold text-teal-950 mt-8">3. Billing, Subscriptions & Refunds</h2>
+        <p>
+          We charge monthly subscription plans for workspaces. Usage rates for message templates are calculated and billed according to Meta conversation-based pricing scales. All charges are pre-billed. Unpaid API usage balances will result in automated system scaling tier restrictions and subsequent service pauses.
+        </p>
+
+        <h2 class="text-xl font-bold text-teal-950 mt-8">4. Intellectual Property</h2>
+        <p>
+          The ConnectStream platform code, designs, algorithms, APIs, dashboards, and trademarks are the exclusive property of ConnectStream Innovation Lab. You may not copy, reverse-engineer, decompile, or scrape the dashboard properties without our prior written authorization.
+        </p>
+
+        <h2 class="text-xl font-bold text-teal-950 mt-8">5. Limitation of Liability</h2>
+        <p>
+          ConnectStream provides integrations "as is." We do not guarantee uninterrupted webhook delivery or constant up-time scores during Meta node updates or cloud provider failures. In no event shall ConnectStream Innovation Lab be liable for lost profits, data drops, or system delays exceeding the amount paid by you during the preceding 3 months.
+        </p>
       </div>
     </div>
+  </main>
 
-    <!-- Developer Benefits Details Column -->
-    <div class="dev-benefits" id="dev-benefits-column">
-      <div class="dev-benefit-card">
-        <h3><span>01</span> Zero-Proxy Delivery Channels</h3>
-        <p>Integrate directly via Meta API endpoints. Deliver verification PINs, tickets, and order invoices bypasses broker queues.</p>
-      </div>
-
-      <div class="dev-benefit-card">
-        <h3><span>02</span> Webhook Subscription Subscriptions</h3>
-        <p>Subscribe to realtime delivery statuses, customer text events, and media uploads with a single callback endpoint.</p>
-      </div>
-
-      <div class="dev-benefit-card">
-        <h3><span>03</span> Native Interactive Menus</h3>
-        <p>Compose rich quick-reply buttons, interactive list menus, and WhatsApp Catalog payloads natively via type-safe SDK interfaces.</p>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Realtime Webhook Simulator Section -->
-  <section class="webhook-simulator-section container" id="webhook-simulator">
-    <div class="webhook-card">
-      <div class="webhook-grid">
-        
-        <!-- Controls & Meta parameters -->
-        <div class="webhook-controls">
-          <div class="section-title-wrapper" style="text-align: left; margin-bottom: 20px;">
-            <h2 class="section-title" style="font-size: 1.6rem; margin-bottom: 6px;">Real-Time Webhook simulator</h2>
-            <p class="section-desc" style="font-size: 0.88rem; margin: 0;">Simulate webhook transaction callbacks locally to see active payload structures.</p>
-          </div>
-          
-          <div class="webhook-buttons" style="display: flex; gap: 12px; margin-bottom: 20px;">
-            <button class="btn-primary" id="btn-trigger-msg" onclick="simulateWebhook('message')">Send Inbound Message</button>
-            <button class="btn-secondary" id="btn-trigger-status" onclick="simulateWebhook('status')">Simulate Delivery Status</button>
-          </div>
-
-          <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
-            Active status updates are delivered in a structured JSON payload directly to your system's webhook listener. Click the controls above to trigger sample mock events.
-          </p>
-        </div>
-
-        <!-- Terminal Logs Panel -->
-        <div class="webhook-logs-terminal" id="logs-panel">
-          <div class="webhook-log-line sent">
-            <div class="log-meta">
-              <span class="log-time">11:04:12</span>
-              <span class="log-status sent">sent</span>
-            </div>
-            <div class="log-payload">Awaiting simulation trigger... Click inbound or delivery status above.</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Onboarding Funnel & Main Footer -->
-  <section class="footer-onboarding" id="onboarding-funnel">
-    <div class="container">
-      <div class="onboarding-title">
-        <h2>Go Live on WhatsApp in 30 Minutes</h2>
-        <p>Say goodbye to long enterprise approval queues. Get started instantly.</p>
-      </div>
-
-      <div class="timeline" id="onboarding-timeline">
-        <div class="timeline-step" id="step-1">
-          <div class="step-number">1</div>
-          <h4 class="step-title">Register</h4>
-          <p class="step-desc">Provision a ConnectStream workspace dashboard in seconds.</p>
-        </div>
-        <div class="timeline-step" id="step-2">
-          <div class="step-number">2</div>
-          <h4 class="step-title">Link Number</h4>
-          <p class="step-desc">Run through the Meta Embedded Signup workflow to connect your number in minutes.</p>
-        </div>
-        <div class="timeline-step active" id="step-3">
-          <div class="step-number">3</div>
-          <h4 class="step-title">Apply for Green Tick</h4>
-          <p class="step-desc">Access guided platform support to claim your official verified Green Tick business badge.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-            <!-- Main Footer Layout -->
-            <!-- Pre-Footer Banner Card Block -->
+  <!-- Pre-Footer Banner Card Block -->
   <div class="bg-emerald-50/50 rounded-2xl border border-emerald-100 max-w-7xl mx-auto my-16 p-12 text-center shadow-sm">
     <h2 class="text-3xl font-bold text-teal-950">Ready to get started?</h2>
     <p class="text-slate-600 mt-2 mb-6">Join 12,500+ businesses growing with ConnectStream.</p>
@@ -353,3 +291,6 @@
   <script src="app.js"></script>
   </body>
   </html>
+
+</body>
+</html>
