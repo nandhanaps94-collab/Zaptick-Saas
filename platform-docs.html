@@ -36,7 +36,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen">
 
-                                                                                                                            <!-- Sticky Header Navigation Bar -->
+                                                                                                                              <!-- Sticky Header Navigation Bar -->
   <header class="flex items-center justify-between w-full px-8 py-4 bg-white border-b border-slate-200 relative mb-6 z-50">
     <!-- Brand Logo -->
     <a href="index.html" class="flex items-center text-teal-950 font-black tracking-tight text-xl">
@@ -45,7 +45,7 @@
     </a>
     
     <!-- Right Side Unified Flex Navigation Block -->
-    <div class="flex items-center gap-8 ml-auto">
+    <div class="hidden md:flex items-center gap-8 ml-auto">
       <!-- Platform Dropdown -->
       <div class="relative group">
         <span class="text-sm font-semibold text-slate-600 hover:text-teal-950 cursor-pointer py-2 block">Platform ⌄</span>
@@ -147,6 +147,77 @@
       <a href="login.html" class="text-sm font-medium text-slate-700 hover:text-teal-950 transition">Sign in</a>
       <a href="pricing.html" class="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition shadow-sm">Get started</a>
     </div>
+
+    <!-- Hamburger Icon for Mobile -->
+    <button id="mobile-menu-button" class="md:hidden text-teal-950 hover:text-teal-800 focus:outline-none z-50 ml-auto p-1" aria-label="Toggle Navigation">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    
+    <!-- Mobile Drawer Overlay Dropdown -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 z-40 shadow-xl flex flex-col p-6 space-y-4 md:hidden">
+      <!-- Platform Section -->
+      <div>
+        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">Platform</div>
+        <div class="flex flex-col gap-2 pl-3">
+          <a href="whatsapp-api.html" class="text-sm font-semibold text-teal-950">WhatsApp Business API</a>
+          <a href="click-to-whatsapp.html" class="text-sm font-semibold text-teal-950">Click to WhatsApp Ads</a>
+          <a href="meta-infrastructure.html" class="text-sm font-semibold text-teal-950">Meta Cloud Infrastructure</a>
+          <a href="chatbot-builder.html" class="text-sm font-semibold text-teal-950">AI Chatbot Builder</a>
+          <a href="broadcast-manager.html" class="text-sm font-semibold text-teal-950">Broadcast Manager</a>
+        </div>
+      </div>
+      
+      <!-- Solutions Section -->
+      <div>
+        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">Solutions</div>
+        <div class="flex flex-col gap-2 pl-3">
+          <a href="solutions-real-estate.html" class="text-sm font-semibold text-teal-950">Real Estate</a>
+          <a href="solutions-education.html" class="text-sm font-semibold text-teal-950">Education</a>
+          <a href="solutions-finance.html" class="text-sm font-semibold text-teal-950">Financial Services</a>
+          <a href="solutions-ecommerce.html" class="text-sm font-semibold text-teal-950">E-commerce</a>
+          <a href="solutions-healthcare.html" class="text-sm font-semibold text-teal-950">Healthcare</a>
+          <a href="solutions-hospitality.html" class="text-sm font-semibold text-teal-950">Hospitality</a>
+        </div>
+      </div>
+      
+      <!-- Resources Section -->
+      <div>
+        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider font-mono mb-2">Resources</div>
+        <div class="flex flex-col gap-2 pl-3">
+          <a href="platform-docs.html" class="text-sm font-semibold text-teal-950">Platform Docs</a>
+          <a href="why-connectstream.html" class="text-sm font-semibold text-teal-950">Why ConnectStream?</a>
+          <a href="blog.html" class="text-sm font-semibold text-teal-950">Blog</a>
+          <a href="partner-program.html" class="text-sm font-semibold text-teal-950">Partner Program</a>
+        </div>
+      </div>
+
+      <a href="pricing.html" class="text-sm font-semibold text-slate-600 hover:text-teal-950 py-1">Pricing</a>
+
+      <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-4">
+        <a href="login.html" class="text-sm font-medium text-slate-700 hover:text-teal-950 py-2">Sign in</a>
+        <a href="pricing.html" class="bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm px-6 py-2.5 rounded-full transition shadow-sm">Get started</a>
+      </div>
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+      (function() {
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+          btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+              btn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>`;
+            } else {
+              btn.innerHTML = `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+            }
+          });
+        }
+      })();
+    </script>
   </header>
 
   <!-- Title Section -->
@@ -313,7 +384,7 @@ Authorization: Bearer ZAP_LIVE_TOKEN_129841
     </div>
   </main>
 
-                                                                                                                        <!-- Pre-Footer Banner Card Block -->
+                                                                                                                          <!-- Pre-Footer Banner Card Block -->
   <div class="bg-emerald-50/50 rounded-2xl border border-emerald-100 max-w-7xl mx-auto my-16 p-12 text-center shadow-sm">
     <h2 class="text-3xl font-bold text-teal-950">Ready to get started?</h2>
     <p class="text-slate-600 mt-2 mb-6">Join 12,500+ businesses growing with ConnectStream.</p>
